@@ -7,7 +7,8 @@ import unittest
 # HINT: You will have to add https://en.wikipedia.org to the URL retrieved using BeautifulSoup
 def getLink(soup):
     soup.find("a", title = "")
-    url = a.tag.get()
+    url = a.tag.get("href")
+    return "er.wiki.org" + url
     pass
 
 # Task 3: Get the details from the box titled "College/school founding". Get all the college/school names and the year they were
