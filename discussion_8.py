@@ -18,9 +18,10 @@ def getAdmissionsInfo2019(soup):
     d = {}
     for tr_tag in tr_list[1:]:
         td_list = tr_tag.find_all('td')
-        school_name = td_list[0].text
-        found_year = td_list[1].text
+        school_name = td_list[0].text.strip()
+        found_year = td_list[1].text.strip()
         d[school_name] = found_year
+    print (d)
     return d
 
 
